@@ -58,14 +58,7 @@ mat-sidenav {
   color: #cccccc;
 }
 
-// <!-- AJUSTES PARA FOOTER --!>
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-// <!-- AJUSTES PARA FOOTER --!>
 
 
 // Boton para subir al inicio
@@ -91,54 +84,12 @@ mat-sidenav {
 // Boton para subir al inicio
 
 
-// <!-- FOOTER --!>
+
 
 mat-sidenav-content {
   flex: 1; /* empuja el footer al final cuando hay poco contenido */
 }
 
-/* 2) Footer estilo */
-.site-footer {
-  background: #111;                /* oscuro como la imagen */
-  color: #fff;
-  padding: 56px 16px;
-}
-
-.footer-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  align-items: center;
-}
-
-.footer-item {
-  text-align: center;
-}
-
-.footer-icon {
-  font-size: 28px;
-  margin-bottom: 12px;
-  display: inline-block;
-}
-
-.footer-title {
-  margin: 0;
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.footer-text {
-  margin: 10px 0 0;
-  color: rgba(255, 255, 255, 0.70);
-  font-size: 14px;
-}
-
-.footer-icon {
-  font-size: 26px;
-  margin-bottom: 12px;
-}
 
 /* Responsive */
 @media (max-width: 768px) {

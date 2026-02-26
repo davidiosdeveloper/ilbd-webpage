@@ -33,7 +33,7 @@ export class Home {
   bannerText: TextDescriptionItem = { 
     title: 'Parejas jovenes', 
     description: 'Glorificamos a Dios al ser familias dispuestas y disponibles que realizan Colombia para Cristo',
-    image: 'assets/banner-river.png'
+    image: 'assets/banner-family-aquamarine.png'
   };
 
   constructor(private mockService: MockServices) {}

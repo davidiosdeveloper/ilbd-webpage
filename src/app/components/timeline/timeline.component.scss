@@ -179,7 +179,12 @@
         box-shadow: 0 16px 40px rgba(0,0,0,.14);
     }
 }
-.card:hover { border-width: 0; }
+.card:hover { 
+    border-width: 0; 
+}
+.card.active:hover {
+transform: scale(1.2);
+}
 .card:not(.active):hover {
   box-shadow: 0 14px 34px rgba(0,0,0,.14);
 }

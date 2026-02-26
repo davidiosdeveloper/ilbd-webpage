@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavContent } from '@angular/material/sidenav';
 import { ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from "../footer.component/footer.component";
 
 @Component({
   selector: 'app-layout',
@@ -17,6 +18,7 @@ import { CommonModule } from '@angular/common';
     RouterModule,
     MatSidenavContent,
     CommonModule,
+    FooterComponent
 ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']

@@ -5,6 +5,7 @@ import { Petitions } from '@features/petitions/petitions';
 import { Events } from '@features/events/events';
 import { BlogReaderComponent } from '@components/blog.reader.component/blog.reader.component';
 import { ToolsComponent } from '@components/tools/tools.component';
+import { PlanningComponent } from '@features/planning/planning.component/planning.component';
 
 
 export const routes: Routes = [
@@ -17,6 +18,7 @@ export const routes: Routes = [
       { path: 'events', component: Events },
       { path: 'blogReader/:id', component: BlogReaderComponent },
       { path: 'tools', component: ToolsComponent },
+      { path: 'planning', component: PlanningComponent },
     ]
   },
 ];
