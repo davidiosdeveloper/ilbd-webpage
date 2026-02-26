@@ -1,0 +1,10 @@
+<app-banner-image />
+<h1 class="upcomingHeader">Próximos eventos</h1>
+
+<div *ngFor="let group of groupedEvents" class="event-group">
+  <h3 class="monthHeader">{{ group.month }}</h3>
+  <hr />
+  <div *ngFor="let event of group.events" class="fade-in-up" #eventItem>
+    <app-event-item [event]="event"></app-event-item>
+  </div>
+</div>

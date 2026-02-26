@@ -1,0 +1,58 @@
+.modal-container {
+  position: relative;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+h2 {
+  margin: 0 0 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.petition-list p {
+  margin: 0 0 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #423f3f2b;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Botón cerrar elegante */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.close-button:hover {
+  transform: rotate(90deg);
+}
+
+/* Quitar borde redondeado a la modal en movil */ 
+@media (max-width: 768px) {
+  .modal-container {
+    border-radius: 0;
+  }
+}
+
+.close-button {
+  outline: none;
+}
+
+.close-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.close-button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}

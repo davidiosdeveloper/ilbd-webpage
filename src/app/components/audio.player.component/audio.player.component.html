@@ -1,0 +1,45 @@
+<div class="player-card" *ngIf="player.currentTrack() as t">
+  <div class="left">
+    <img class="cover" [src]="t.cover" alt="" />
+  </div>
+
+  <div class="right">
+    <div class="meta">
+      <div class="title">{{ t.title }}</div>
+      <div class="subtitle" *ngIf="t.artist">By {{ t.artist }}</div>
+    </div>
+
+    <div class="controls">
+      <button class="icon" (click)="player.prev()">⏮</button>
+      <button class="icon play" (click)="player.toggle()">
+        {{ player.status() === 'playing' ? '⏸' : '▶' }}
+      </button>
+      <button class="icon" (click)="player.next()">⏭</button>
+    </div>
+
+    <div class="bar-row">
+      <div class="time">{{ formatTime(player.currentTime()) }}</div>
+
+      <div class="bar" #bar (click)="onSeek($event, bar)">
+        <div class="bar-fill" [style.width.%]="player.progress()"></div>
+      </div>
+
+      <div class="time">{{ formatTime(player.duration()) }}</div>
+    </div>
+
+    <div class="playlist">
+      <div
+        class="track"
+        *ngFor="let tr of player.playlist(); let i = index"
+        [class.active]="i === player.currentIndex()"
+        (click)="player.currentIndex.set(i); player.loadCurrent(true)"
+      >
+        <div class="name">{{ i + 1 }}. {{ tr.title }}</div>
+        <div class="dur">
+          <!-- si no tienes duración aún, muestra --:-- -->
+          {{ tr.duration ? formatTime(tr.duration) : '--:--' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

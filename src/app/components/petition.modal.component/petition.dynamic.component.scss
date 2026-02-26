@@ -1,0 +1,48 @@
+.modal-container {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: white;
+  height: 100%;
+  overflow-y: auto;
+}
+
+h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.petition-list p {
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.petition-list p:hover {
+  transform: translateX(5px);
+  background: rgba(255,255,255,0.1);
+}
+
+/* Botón cerrar glow */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: rotate(90deg);
+}

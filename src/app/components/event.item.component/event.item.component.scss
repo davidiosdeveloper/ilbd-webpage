@@ -1,0 +1,56 @@
+.contentGrid {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 1em;
+}
+
+.descriptionGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    align-items: stretch;
+    margin-bottom: 2em;
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.descriptionButtonGrid {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1em;
+    align-items: stretch;
+    justify-items: start;
+}
+
+.title {
+    font-size: 2.3em;
+    font-weight: 400;
+    color: #181818;
+    margin: 1em 0 0.8em 0;
+}
+
+.info {
+    font-size: 0.85em;
+    color: #757575;
+    margin: 0.5em 0 0.5em 0;
+}
+
+.descriptionButtonGrid button {
+    display: inline-block;
+    padding: 0.2em 3em;
+    border: none;
+    background-color: #1dc6df;
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    height: 3em;
+    transition: background-color 0.3s ease;
+    font-size: small;
+
+    &:hover {
+        background-color: #5aa2a7;
+    }
+}

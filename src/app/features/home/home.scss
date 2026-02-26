@@ -1,0 +1,16 @@
+.link {
+    text-align: center;
+    margin: -1em 0 2em 0; 
+    a {
+        color: #afafaf;
+        text-decoration: none;
+    } 
+    
+}
+
+.horizontallyDivided {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 2em;
+    margin: 4em 6em;
+}

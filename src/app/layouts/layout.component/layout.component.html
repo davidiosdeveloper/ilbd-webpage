@@ -1,0 +1,18 @@
+<mat-sidenav-container class="layout-container">
+  <mat-sidenav #sidenav mode="over">
+    <nav class="menu-list">
+      <a href="/">Inicio</a>
+      <a href="/events">Eventos <span class="arrow">></span></a>
+      <a href="/planning">Planeación <span class="arrow">></span></a>
+      <a href="/petitions">Peticiones <span class="arrow">></span></a>
+      <a href="/herramientas">Herramientas <span class="arrow">></span></a>
+    </nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header (menuClick)="sidenav.toggle()"></app-header>
+    <div class="page-content">
+      <router-outlet />
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
