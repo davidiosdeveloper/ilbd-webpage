@@ -27,6 +27,10 @@
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 6px;
+
+  white-space: nowrap;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
 }
 
 .meta .subtitle {

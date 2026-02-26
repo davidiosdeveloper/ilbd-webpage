@@ -1,16 +1,28 @@
-.player-card {
+.card {
     gap: 24px;
     max-width: 820px;
     padding: 22px;
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,.10);
+
+    max-height: 19.8em; 
+    
 }
 
 .blog {
   max-width: 820px;
   margin: 0 auto;
   padding: 16px;
+
+  max-height: 16em;
+  overflow-y: auto;
+}
+
+.blog::-webkit-scrollbar { display: none; } 
+.blog { 
+  scrollbar-width: none;  
+  -ms-overflow-style: none; 
 }
 
 .blog__header {
@@ -18,7 +30,7 @@
 }
 
 .blog__title {
-  font-size: 44px;
+  font-size: 1.5em;
   line-height: 1.05;
   margin: 0;
   font-weight: 800;
@@ -61,13 +73,13 @@
 }
 
 .row__month {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: .06em;
 }
 
 .row__day {
-  font-size: 34px;
+  font-size: 28px;
   font-weight: 900;
   line-height: 1;
   margin-top: 2px;

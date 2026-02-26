@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { BlogItem } from '@models/blog.item';
 import { Utils } from '@shared/utils';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-blog-list',
@@ -13,13 +14,13 @@ import { CommonModule } from '@angular/common';
 export class BlogListComponent {
   items: BlogItem[] = [
     { id: '1', date: new Date(2025, 5, 19), title: '¿Cómo tratar los conflictos matrimoniales?', href: '/blog/1' },
-    { id: '2', date: new Date(2026, 1, 9),  title: 'Angular sin drama: tips que sí sirven', href: '/blog/2' },
-    { id: '3', date: new Date(2026, 2, 2),  title: 'RxJS para humanos (prometido)', href: '/blog/3' },
-    { id: '4', date: new Date(2026, 0, 31), title: 'CSS Grid: el layout que te mereces', href: '/blog/4' },
-    { id: '5', date: new Date(2026, 5, 24), title: 'Audio player: de 0 a pro en Angular', href: '/blog/5' },
+    { id: '2', date: new Date(2026, 1, 9),  title: '¿Estorbar a Dios?', href: '/blog/2' },
+    { id: '3', date: new Date(2026, 2, 2),  title: '¿Crees que Dios está jugando?', href: '/blog/3' },
+    { id: '4', date: new Date(2026, 0, 31), title: '¿Cómo darle la gloria al Señor como matrimonios?', href: '/blog/4' },
+    { id: '5', date: new Date(2026, 5, 24), title: '¿Peleas por la unidad?', href: '/blog/5' },
   ];
 
-  constructor(private utils: Utils) {}
+  constructor(private utils: Utils, private route: ActivatedRoute, private router: Router) {}
 
   monthShort(d: Date) {
     return this.utils.formatMonthShort(d);
@@ -30,9 +31,7 @@ export class BlogListComponent {
   }
 
   verMas(item: BlogItem) {
-    // Aquí puedes navegar (Router) o abrir modal
-    // Ejemplo simple:
-    console.log('Ver más:', item);
+    this.router.navigate(['/blogReader', item.id]);
   }
 
   trackById(_: number, item: BlogItem) {

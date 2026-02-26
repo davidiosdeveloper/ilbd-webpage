@@ -41,6 +41,9 @@ $vertical-center: 40%;
   opacity: 0;
   animation: fadeSlideUp 0.5s cubic-bezier(.22,1,.36,1) forwards;
   animation-delay: 0.5s;
+
+  text-align: center;
+  line-height: 1.01;
 }
 
 // <-- Banner divider styles -->

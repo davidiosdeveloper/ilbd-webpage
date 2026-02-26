@@ -1,6 +1,14 @@
 .info-section {
   padding: 2rem 2rem 4rem 2rem;
   background: antiquewhite; // #6ab3b8; aguamarina anterior
+
+
+  background-image: url("assets/banner-worship-grayscale.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 /* 🔹 Sección Superior */
@@ -12,11 +20,11 @@
 .top-section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #6c6c6c;
+  color: #fff; //#6c6c6c;
 }
 
 .top-section p {
-  color: #666;
+  color: #fff; // #666;
 }
 
 /* 🔹 Sección Inferior */
@@ -42,7 +50,7 @@
   grid-template-columns: 3rem auto;
   //align-items: center;
   gap: 0.5rem;
-  background: #6b5b5b; // #6ab3b8; /* Aguamarina */ <-- mas sobrio
+  background: #000000 ; //#53b2d0;azul // #6b5b5b;cafe // #6ab3b8;Aguamarina
   padding: 1rem;
   font-weight: 600;
 
@@ -82,7 +90,7 @@
 /* Botón inferior */
 .card-button {
   height: 30px;
-  background: #6b5b5b; // #6ab3b8; /* Aguamarina */ <-- mas sobrio
+  background: #000000 ; //#53b2d0;azul // #6b5b5b;cafe // #6ab3b8;Aguamarina
   border: none;
   cursor: pointer;
   font-weight: 500;

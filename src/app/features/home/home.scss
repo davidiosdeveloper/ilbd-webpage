@@ -9,8 +9,16 @@
 }
 
 .horizontallyDivided {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 2em;
-    margin: 4em 6em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin: 4em 6em;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1200px) {
+  .horizontallyDivided {
+    grid-template-columns: 1fr;
+    margin: 2em;
+  }
 }

@@ -33,6 +33,14 @@ export class Utils {
         return String(d.getDate()).padStart(2, '0');
     }
 
+    public calculateReadingTime(html: string): number {
+        const text = html.replace(/<[^>]*>/g, ''); // quitar etiquetas
+        const words = text.trim().split(/\s+/).length;
+        const wordsPerMinute = 200;
+
+        return Math.ceil(words / wordsPerMinute);
+    }
+
     public toDriveDirectUrl(url: string): string {
         // Caso /file/d/<id>/
         const match = url.match(/\/file\/d\/([^/]+)/);

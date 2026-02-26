@@ -1,5 +1,5 @@
 import { Component, Input, OnChanges } from '@angular/core';
-import { TextSideBySideItem } from '@models/text.sidebyside.item';
+import { TextDescriptionItem } from '@models/text.sidebyside.item';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
@@ -10,7 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   styleUrl: './text.sidebyside.component.scss',
 })
 export class TextSidebysideComponent implements OnChanges {
-  @Input() content!: TextSideBySideItem;
+  @Input() content!: TextDescriptionItem;
 
   safeTitle!: SafeHtml;
   safeDescription!: SafeHtml;

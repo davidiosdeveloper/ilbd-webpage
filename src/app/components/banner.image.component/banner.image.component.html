@@ -1,7 +1,7 @@
 <div class="banner-image">
-  <img src="assets/banner-river.png" alt="Banner Image">
+  <img src="{{text.image ?? 'assets/banner-river.png'}}" alt="Banner Image">
   <div class="black-background"></div>
-  <label class="banner-title">Parejas jovenes</label>
+  <label class="banner-title" [innerHTML]="safeTitle"></label>
   <hr class="banner-divider" />
-  <label class="banner-subtitle">Glorificamos a Dios al ser familias dispuestas y disponibles que realizan Colombia para Cristo</label>
+  <label class="banner-subtitle" [innerHTML]="safeDescription"></label>
 </div>
