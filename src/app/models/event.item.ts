@@ -5,5 +5,13 @@ export interface EventItem {
   location?: string;
   locationSecond?: string;
   date?: string;
+
+  subtitle?: string;
+  ctaText?: string;
+  id?: string | number;
 }
 
+export interface MonthMarker {
+  label: string;
+  index: number; // primer item de ese mes
+}

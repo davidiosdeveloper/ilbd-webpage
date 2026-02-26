@@ -1,0 +1,112 @@
+<div>
+    <div class="timeline-carousel">
+
+    <!-- ======= Seccion titulo ======= -->
+    <div class="top-section">
+        <p>Hola!</p>
+        <h2>Próximos eventos</h2>
+        <div class="separator"></div>
+        <p>No te pierdas los siguientes eventos que tenemos preparados</p>
+    </div>
+
+  <!-- ======= Timeline (arriba) ======= -->
+  <div class="timeline-row">
+    <button class="" type="button" (click)="prev()" aria-label="Anterior" style="visibility: hidden;">
+    </button>
+
+    <div #timelineViewport class="timeline-viewport">
+
+        <!-- línea base -->
+        <div class="timeline-line"></div>
+
+      <div class="timeline-track" [ngStyle]="timelineTrackStyle">
+
+        <!-- labels de mes -->
+        <div
+          class="month-label"
+          *ngFor="let m of monthMarkers"
+          [style.left]="markerLeftPx(m)"
+        >
+          {{ m.label }}
+        </div>
+
+        <!-- puntos -->
+        <ng-container *ngFor="let it of normalized; let i = index">
+          <button
+            class="dot"
+            type="button"
+            [class.active]="i === currentIndex"
+            [style.left]="dotLeftPx(i)"
+            (click)="onDotClick(i)"
+            [attr.aria-label]="'Ir a ' + (it._date | date:'longDate')"
+          ></button>
+
+          <div class="day" [style.left]="dotLeftPx(i)">
+            {{ formatDay(it._date) }}
+          </div>
+        </ng-container>
+
+      </div>
+    </div>
+
+    <button class="nav-btn right" type="button" (click)="next()" aria-label="Siguiente" style="visibility: hidden;"></button>
+  </div>
+
+  <!-- ======= Cards (abajo) ======= -->
+  <div class="cards-row">
+    <button class="nav-btn left" type="button" (click)="prev()" aria-label="Anterior">
+      ‹
+    </button>
+
+    <div
+      #cardsViewport
+      class="cards-viewport"
+      (pointerdown)="onPointerDown($event)"
+      (pointermove)="onPointerMove($event)"
+      (pointerup)="onPointerUp()"
+      (pointercancel)="onPointerUp()"
+      (pointerleave)="onPointerUp()"
+    >
+      <div class="cards-track" [ngStyle]="cardsTrackStyle">
+        <article
+            class="card"
+            *ngFor="let it of normalized; let i = index"
+            [class.active]="i === currentIndex"
+            [style.width.px]="cardWidthPx"
+
+            role="button"
+            tabindex="0"
+            (click)="onCardClick(i)"
+            (keydown.enter)="onCardClick(i)"
+            (keydown.space)="$event.preventDefault(); onCardClick(i)"
+
+        >
+          <div class="img-wrap">
+            <img [src]="it.image" [alt]="it.title ?? 'Imagen'" />
+          </div>
+
+          <div class="card-body">
+            <h3 class="title" *ngIf="it.title">{{ it.title }}</h3>
+            <p class="subtitle" *ngIf="it.date">{{ it.date }}</p>
+
+            <button
+              class="cta"
+              type="button"
+              *ngIf="it.ctaText"
+              (click)="onCta(it)"
+            >
+              {{ it.ctaText }}
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <button class="nav-btn right" type="button" (click)="next()" aria-label="Siguiente">
+      ›
+    </button>
+  </div>
+
+</div>
+</div>
+

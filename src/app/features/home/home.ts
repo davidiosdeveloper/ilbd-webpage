@@ -8,6 +8,8 @@ import { TextDescriptionItem } from '@models/text.sidebyside.item';
 import { MockServices } from '@services/mock/mock.services';
 import { AudioPlayerComponent } from '@components/audio.player.component/audio.player.component';
 import { BlogListComponent } from '@components/blog.list.component/blog.list.component';
+import { TimelineComponent } from '@components/timeline/timeline.component';
+import { EventItem } from '@models/event.item';
 
 @Component({
   selector: 'app-home',
@@ -18,13 +20,14 @@ import { BlogListComponent } from '@components/blog.list.component/blog.list.com
     TextSidebysideComponent, 
     InfoSectionComponent, 
     AudioPlayerComponent,
-    BlogListComponent
+    BlogListComponent,
+    TimelineComponent
   ],
   templateUrl: './home.html',
   styleUrls: ['./home.scss'],
 })  
 export class Home {
-
+  eventos: EventItem[] = [];
   cards: PetitionCardItem[] = [];
   contentTextSBS!: TextDescriptionItem
   bannerText: TextDescriptionItem = { 
@@ -44,11 +47,21 @@ export class Home {
       this.cards = data.slice(0, 3); 
     }); 
 
-    
+    this.mockService.getEventsItems().subscribe(events => {
+      this.eventos = events;
+      console.log('Eventos cargados:', this.eventos);
+    });
   }
 
   
 
+  onSelect(item: EventItem) {
+    console.log('Seleccionado:', item);
+  }
+
+  onMoreInfo(item: EventItem) {
+    console.log('CTA:', item);
+  }
 
 }
 

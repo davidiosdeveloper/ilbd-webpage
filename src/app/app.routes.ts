@@ -1,10 +1,11 @@
-import { provideRouter, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { LayoutComponent } from './layouts/layout.component/layout.component';
 import { Home } from './features/home/home';
 import { Petitions } from '@features/petitions/petitions';
 import { Events } from '@features/events/events';
 import { BlogReaderComponent } from '@components/blog.reader.component/blog.reader.component';
-import { ToolsComponent } from '@components/tools/tools.component/tools.component';
+import { ToolsComponent } from '@components/tools/tools.component';
+
 
 export const routes: Routes = [
   {

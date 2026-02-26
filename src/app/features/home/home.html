@@ -1,10 +1,23 @@
 <app-banner-image [text]="bannerText"/>
-<app-card-list [cards]="cards"></app-card-list>
-<h3  class="link"><a href="petitions">Ver peticiones</a></h3>
+<div class="Peticiones">
+    <app-card-list [cards]="cards"></app-card-list>
+    <h3  class="link"><a href="petitions">Ver peticiones</a></h3>
+</div>
 <app-text-sidebyside [content]="contentTextSBS"/>
+<app-info-section />
 <div class="horizontallyDivided">
     <app-audio-player />
     <div><app-blog-list /></div>
 </div>
-<app-info-section />
+<app-timeline-carousel class="timelineContainer"
+  [items]="eventos"
+  [initialIndex]="2"
+  (itemSelected)="onSelect($event)"
+  (ctaClicked)="onMoreInfo($event)"
+></app-timeline-carousel>
+
+
+
+
+
 
