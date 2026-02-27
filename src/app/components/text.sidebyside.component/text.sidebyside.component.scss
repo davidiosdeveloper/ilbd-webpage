@@ -1,0 +1,31 @@
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center; 
+  background-color: #6ab3b8; 
+  padding: 20px;
+
+  height: 20em; 
+  gap: 1em;
+}
+
+.custom-grid h2 {
+  text-align: right;
+  margin: 0;
+  color:#ffffff;
+}
+
+.custom-grid .separator {
+  width: 1px;
+  height: 120px;
+  background-color: #ffffff; 
+  justify-self: center; 
+}
+
+.custom-grid p {
+  text-align: left; 
+  font-weight: 200;
+  margin: 0;
+  color:#ffffff;
+  width: 50%;
+}

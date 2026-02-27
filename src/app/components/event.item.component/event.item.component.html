@@ -1,0 +1,17 @@
+<div>
+    <div class="contentGrid">
+        <div >
+            <h4 class="title">{{ event.title }}</h4>
+            <p class="info">{{ event.date }}</p>
+            <p class="info">{{ event.location }}</p>
+        </div>
+        <div class="descriptionGrid">
+            <div><img [src]="event.image" alt="" /></div>
+            <div class="descriptionButtonGrid">
+                <p>{{ event.description }}</p>
+                <div style="display: flex; align-items: anchor-center"><button class="btn btn-primary">Ver detalles</button></div>
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>

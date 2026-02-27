@@ -1,0 +1,29 @@
+.link {
+    text-align: center;
+    margin: -1em 0 2em 0; 
+    a {
+        color: #afafaf;
+        text-decoration: none;
+    } 
+    
+}
+
+.horizontallyDivided {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  margin: 4em 6em;
+}
+
+.timelineContainer {
+  margin: 2em 3em 2em 0em;
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+}
+
+/* 📱 Responsive */
+@media (max-width: 1200px) {
+  .horizontallyDivided {
+    grid-template-columns: 1fr;
+    margin: 2em;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="card-container">
+  <div class="card" *ngFor="let card of cards" (click)="openPetitions(card)">
+    <div class="card-image">
+      <img [src]="card.image" [alt]="card.title">
+    </div>
+
+    <div class="card-content">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+      <p class="petition-link">
+      @if (card.petitions?.length > 0) {
+        Ver lista de peticiones
+      }
+      </p>
+    </div>
+  </div>
+</div>

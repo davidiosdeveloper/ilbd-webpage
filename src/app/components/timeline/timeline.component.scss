@@ -1,0 +1,250 @@
+:host {
+  display: block;
+}
+
+/* Evita que reglas globales de :hover afecten la geometría del carrusel */
+:host ::ng-deep .cards-viewport img:hover,
+:host ::ng-deep .cards-viewport .card:hover {
+  transform: none !important;
+}
+
+/* 🔹 Sección Superior */
+.top-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.top-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #151414; //#6c6c6c;
+}
+.top-section p {
+  color: #5c5c5c; // #666;
+}
+.separator {
+    width: 120px;
+    height: 1px;
+    background-color: #777777; 
+    justify-self: center; 
+}
+/* 🔹 Sección Superior */
+
+
+.timeline-carousel {
+  width: 100%;
+  user-select: none;
+  background: #fff;
+  padding: 18px 18px;
+  margin: 0 2em 0 1em;
+}
+
+/* ======= Controles laterales ======= */
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  color: #333;
+  font-size: 26px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+
+  &:hover { transform: scale(1.04); box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+  &:active { transform: scale(.98); }
+}
+
+.timeline-row,
+.cards-row {
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ======= Timeline ======= */
+.timeline-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 90px;
+  min-width: 0;
+}
+
+.timeline-track {
+  position: relative;
+  height: 90px;
+  will-change: transform;
+  transition: transform 360ms ease;
+}
+
+/* línea central */
+.timeline-line {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #d7d7d7;
+}
+
+.timeline-line-fixed {
+  position: absolute;
+  top: 46px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #d7d7d7;
+  z-index: 0;
+}
+
+
+/* label de mes */
+.month-label {
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #3b3b3b;
+  white-space: nowrap;
+}
+
+/* puntos */
+.dot {
+  position: absolute;
+  top: 38px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #22b8cf;
+  background: #fff;
+  cursor: pointer;
+
+  &.active {
+    width: 16px;
+    height: 16px;
+    top: 36px;
+    background: #22b8cf;
+  }
+}
+
+.day {
+  position: absolute;
+  top: 56px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #6b6b6b;
+}
+
+/* ======= Cards ======= */
+.cards-viewport {
+  overflow: hidden;
+  position: relative;
+  touch-action: pan-y; // permite swipe horizontal sin bloquear scroll vertical
+  padding: 12px 0 30px;
+
+  min-width: 0;         // clave en grids/flex para que no “empuje” el layout
+}
+
+.cards-track {
+  display: flex;
+  align-items: stretch;
+  will-change: transform;
+  transition: transform 380ms ease;
+
+  min-width: max-content; // el track mide lo que suman las cards
+}
+
+.card {
+    flex: 0 0 auto; 
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    box-shadow: 0 10px 26px rgba(0,0,0,.10);
+    transform-origin: center;
+    will-change: transform;
+    transform: scale(.88);
+    opacity: .70;
+    transition: transform 320ms ease, opacity 320ms ease, box-shadow 320ms ease;
+
+    &.active {
+        transform: scale(1);
+        opacity: 1;
+        box-shadow: 0 16px 40px rgba(0,0,0,.14);
+    }
+}
+.card:hover { 
+    border-width: 0; 
+}
+.card.active:hover {
+transform: scale(1.2);
+}
+.card:not(.active):hover {
+  box-shadow: 0 14px 34px rgba(0,0,0,.14);
+}
+
+
+.img-wrap {
+  width: 100%;
+  aspect-ratio: 16/7; // 16/9;
+  background: #f3f3f3;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.card-body {
+  padding: 10px 12px 12px; // 14px 14px 16px;
+  display: grid;
+  gap: 6px;
+  
+  min-height: 50px;    // ajusta según tu diseño
+}
+
+.title {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+  min-height: 1em;
+  line-height: 1.2;    // evita saltos mínimos
+
+  
+    display: -webkit-box;
+    -webkit-line-clamp: 2;     // máximo 2 líneas
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  min-height: 1em;      // evita saltos mínimos
+}
+
+.cta {
+  justify-self: center;
+  padding: 8px 14px; // 10px 16px;
+  border: 0;
+  border-radius: 3px;
+  
+  background: #22b8cf;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: .3px;
+
+  &:hover { filter: brightness(.95); }
+  &:active { transform: translateY(1px); }
+}

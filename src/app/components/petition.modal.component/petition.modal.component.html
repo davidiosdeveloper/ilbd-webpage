@@ -1,0 +1,11 @@
+<div class="modal-container">
+<button class="close-button" (click)="close()">
+    <mat-icon>close</mat-icon>
+  </button>
+  <h2>{{ data.title }}</h2>
+  <div class="petition-list">
+    <p *ngFor="let petition of data.petitions">
+      {{ petition }}
+    </p>
+  </div>
+</div>

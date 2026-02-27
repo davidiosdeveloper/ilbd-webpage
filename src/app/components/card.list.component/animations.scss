@@ -1,0 +1,47 @@
+// <-- Animacion basica -->
+/*.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.4s cubic-bezier(.22,1,.36,1);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+}
+
+// <-- HOVER ANIMATION -->
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}*/
+// <-- Animacion basica -->
+
+// <-- Minimalista -->
+/*.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.4s cubic-bezier(.22,1,.36,1),
+              box-shadow 0.4s cubic-bezier(.22,1,.36,1);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.card-image img {
+  transition: transform 0.8s ease;
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}*/
+// <-- Minimalista -->

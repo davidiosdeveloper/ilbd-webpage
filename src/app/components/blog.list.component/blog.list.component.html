@@ -1,0 +1,49 @@
+<div class="card">
+  <header class="blog__header">
+    <h2 class="blog__title">El blog de Rick</h2>
+  </header>
+  <section class="blog">
+    <div class="blog__list">
+      <article
+        class="row"
+        *ngFor="let item of items; trackBy: trackById"
+        (click)="verMas(item)"
+        role="button"
+        tabindex="0"
+      >
+        <!-- Fecha -->
+        <div class="row__date" aria-label="Fecha">
+          <div class="row__month">{{ monthShort(item.date) }}</div>
+          <div class="row__day">{{ day2Digits(item.date) }}</div>
+        </div>
+
+        <!-- Título -->
+        <div class="row__content">
+          <div class="row__blogtitle">{{ item.title }}</div>
+        </div>
+
+        <!-- Separador vertical -->
+        <div class="row__divider" aria-hidden="true"></div>
+
+        <!-- Acción -->
+        <div class="row__action">
+          <button 
+            class="row__btn" 
+            type="button" 
+            (click)="$event.stopPropagation(); 
+            verMas(item)">
+            Ver más
+          </button>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
+
+<!--
+<button class="row__btn" type="button"
+        [routerLink]="item.href"
+        (click)="$event.stopPropagation()">
+  Ver más
+</button>
+-->
