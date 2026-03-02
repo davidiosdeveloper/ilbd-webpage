@@ -43,6 +43,7 @@
   align-items: center;
   gap: 14px;
   margin: 14px 0;
+  justify-content: center;
 }
 
 .icon {
@@ -128,3 +129,17 @@
   -ms-overflow-style: none; 
 }
 // <!-- Estilos para la lista de reproducción con scroll -->
+
+
+ 
+
+@media (max-width: 768px) {
+  .player-card{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    
+  }
+}

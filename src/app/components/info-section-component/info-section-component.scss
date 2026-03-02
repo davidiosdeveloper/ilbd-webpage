@@ -40,7 +40,8 @@
   display: flex;
   flex-direction: column;
   background: white;
-  width: 16em;
+  //width: 16em;
+  width: 260px;
   cursor: pointer;
 }
 
@@ -109,4 +110,36 @@ width: 120px;
   height: 1px;
   background-color: #777777; 
   justify-self: center; 
+}
+
+
+@media (max-width: 768px) {
+
+  .cards-section::before {
+    content: "";
+    min-width: 10px;
+  }
+
+  .cards-section {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+
+    padding: 20px 0 20px 20px;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+
+    justify-content: flex-start; 
+  }
+
+  .card {
+    flex: 0 0 260px;
+    scroll-snap-align: start;
+  }
+
+  .cards-section::-webkit-scrollbar {
+    display: none;
+  }
+
 }

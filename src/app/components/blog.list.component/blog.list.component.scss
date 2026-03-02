@@ -5,9 +5,7 @@
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 10px 30px rgba(0,0,0,.10);
-
     max-height: 19.8em; 
-    
 }
 
 .blog {
@@ -130,6 +128,14 @@
 
 /* Responsive */
 @media (max-width: 560px) {
+  .card {
+    max-height: unset; 
+  }
+
+  .blog {
+    padding: unset;
+  }
+
   .blog__title { font-size: 34px; }
 
   .row {
@@ -139,15 +145,18 @@
 
   .row__divider {
     display: none;
+    visibility: none;
+    max-height: 0px;
   }
 
   .row__action {
-    grid-column: 2 / 3;
-    justify-items: start;
-    padding: 0 18px 14px;
+    display: none;
+    visibility: none;
+    max-height: 0px;
+    max-height: 0px;
   }
 
   .row__content {
-    padding-bottom: 8px;
+    padding: 10px;
   }
 }

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { BannerImageComponent } from '../../components/banner.image.component/banner.image.component';
 import { EventItemComponent } from '@components/event.item.component/event.item.component';
 import { AfterViewInit, OnInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { TextDescriptionItem } from '@models/text.sidebyside.item';
 
 
 @Component({
@@ -18,6 +19,12 @@ export class Events implements OnInit, AfterViewInit {
   myEvents: EventItem[] = [/* ... */];
   groupedEvents: { month: string; events: EventItem[] }[] = [];
   @ViewChildren('eventItem') eventItems!: QueryList<ElementRef>;
+
+  bannerText: TextDescriptionItem = { 
+    title: 'Parejas jovenes', 
+    description: 'Glorificamos a Dios al ser familias dispuestas y disponibles que realizan Colombia para Cristo',
+    image: 'assets/banner-family-aquamarine.png'
+  };
 
   constructor(private mockService: MockServices, private utils: Utils) {}
   

@@ -54,3 +54,9 @@
         background-color: #5aa2a7;
     }
 }
+
+.descriptionGrid {
+    display: grid;
+    grid-template-columns: unset;
+    grid-template-rows: auto auto;
+}

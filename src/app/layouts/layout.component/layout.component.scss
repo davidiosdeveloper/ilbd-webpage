@@ -1,6 +1,15 @@
 .layout-container {
   min-height: 100vh;
-  // overflow-y: auto; // me pide eliminar esto para el footer
+}
+
+.page-content::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.page-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Header fijo */
@@ -58,9 +67,6 @@ mat-sidenav {
   color: #cccccc;
 }
 
-
-
-
 // Boton para subir al inicio
 .scroll-top-btn {
   position: fixed;
@@ -83,20 +89,6 @@ mat-sidenav {
 }
 // Boton para subir al inicio
 
-
-
-
 mat-sidenav-content {
   flex: 1; /* empuja el footer al final cuando hay poco contenido */
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-  .footer-item {
-    padding: 12px 0;
-  }
 }

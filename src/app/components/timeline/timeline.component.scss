@@ -248,3 +248,9 @@ transform: scale(1.2);
   &:hover { filter: brightness(.95); }
   &:active { transform: translateY(1px); }
 }
+
+@media (max-width: 768px) {
+  .timeline-carousel {
+    width: 90%;
+  }
+}

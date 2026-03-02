@@ -16,7 +16,7 @@ import { MockServices } from '@services/mock/mock.services';
 export class Petitions implements OnInit {
   cards: PetitionCardItem[] = [];
   contentTextSBS: TextDescriptionItem = {
-        title: 'Peticiones',
+        title: 'Lista de peticiones',
         description: 'Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias. <br/><br/> Filipenses 4:6'
       }
 
